@@ -33,6 +33,10 @@ public class Tree {
     public void add( TreeNode n ){
 	_heap.add(n);
     }
+    
+    public int size(){
+	return _heap.size(); 
+    }
 
 
 

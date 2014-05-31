@@ -1,9 +1,8 @@
 import java.io.*; 
 import java.util.*; 
-import java.util.Scanner.*; 
+
 
 public class Driver{
-    public static void main (String[] args){
     
     private String name; 
     private String rescuee; 
@@ -11,20 +10,20 @@ public class Driver{
     public void main(String name, String rescuee){
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Welcome  warrior! You have been summoned on a mission of upmost importance.  State your name");
-	name = sc.findInLine(); 
+	name = sc.next(); 
 	while (name.length() == 0){
 	    System.out.println("You have not entered anything! Please state your name warrior");
-	    name = sc.findInLine(); 
+	    name = sc.next(); 
 	}
 	System.out.println("Marvelous, " + name + " it is time to choose your preferance in who you would like to rescue" + "\n" + "Please tell us if you would like to save the PRINCESS or the KNIGHT."); 
-	rescuee = sc.findInLine(); 
+	rescuee = sc.next(); 
 	while(rescuee.length() == 0){
 	    System.out.println(name + "You have not yet told us who you wuold like to save.  Please state your preference, be it PRINCESS or KNIGHT"); 
-	    name = sc.findInLine(); 
+	    name = sc.next(); 
 	}
 	System.out.println(name + "you have chosen to save the " + rescuee + "your task lay ahead.  Proceede towards the castle"); 
 	Thread.sleep(1000); //walking towards the castle. 
-	runGame(); 
+	runGame(TreeNode tree); 
     }
 
     public void runGame(TreeNode tree){
@@ -54,7 +53,7 @@ public class Driver{
 		tree.get(i).getGame.runMe(); //play the game
 		if( tree.get(i).getGame.runMe()){ //boolean statement to see if they won
 		    System.out.println(tree.get(i).getStory()); 
-		    if(sc.getInt() == 0)//if the want to go left (left from the birds eye view of a tree, with root at the top)
+		    if(sc.getInt() == 0)//if the want to go left (left from the birds eye view of a tree with root at the top)
 			i = i * 2 + 1;
 		    if(sc.getInt() == 1)//if they want to go right
 			i = i * 2 + 2; 
@@ -72,7 +71,6 @@ public class Driver{
 		
 		
     //DOES GETGAME.RUNME() RETURN BOOLEAN?
-    }
 }//class
     
     
