@@ -3,3 +3,4 @@ Start date: 5/26/14
 5/27: BrainStorming: How to run miniGames in the MegaGame? How to orient the tree? How to make the greatest game of all time? -M&C
 5/28: BrainStorming: Wrote Component Breakdown, to-do list and UML; -C
 Coding: Copied and edited Tree, and TreeNode. Started MiniGame interface and EasyMath class for testing. -C
+6/1: Completed EasyMath. -C
