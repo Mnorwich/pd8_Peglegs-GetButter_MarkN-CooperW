@@ -1,4 +1,4 @@
 public interface MiniGame{
-    public void runMe();
+    public boolean runMe();
 
 }
