@@ -11,7 +11,7 @@ public class Tree {
     private ArrayList<TreeNode> _heap; //underlying container
     
     /*****************************************************
-     * default constructor  ---  inits empty heap
+     * default constructor  ---  inits empty
      *****************************************************/
     public Tree(){
 	_heap = new ArrayList<TreeNode>();
@@ -32,10 +32,6 @@ public class Tree {
 
     public void add( TreeNode n ){
 	_heap.add(n);
-    }
-    
-    public int size(){
-	return _heap.size(); 
     }
 
 

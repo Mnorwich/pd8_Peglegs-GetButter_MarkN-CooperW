@@ -3,4 +3,9 @@ Start date: 5/26/14
 5/27: BrainStorming: How to run miniGames in the MegaGame? How to orient the tree? How to make the greatest game of all time? -M&C
 5/28: BrainStorming: Wrote Component Breakdown, to-do list and UML; -C
 Coding: Copied and edited Tree, and TreeNode. Started MiniGame interface and EasyMath class for testing. -C
+<<<<<<< HEAD
 6/1: Completed EasyMath. -C
+=======
+5/29: Flushing out ideas.  Finilized our plans for the driver and how the TreeNodes tie in with the storyline (game is accesed first.  If player wins then the story is printed in order to pick the path). -M&C
+5/30: Completed Driver.  Added size method for Treee. Still wondering if node.getGame().runGame() will return a boolean statement. Wrote out plan to implement battleship minigame.  Might need create two files for this minigame. -M 
+>>>>>>> FETCH_HEAD
