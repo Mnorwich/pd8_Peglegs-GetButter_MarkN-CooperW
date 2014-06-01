@@ -2,7 +2,7 @@ public class EasyMath implements MiniGame{
     public EasyMath(){
     }
     
-    public void runMe(){
-	System.out.println("2+2");
+    public boolean runMe(){
+	return 2 + 2 == 4;
     }
 }
