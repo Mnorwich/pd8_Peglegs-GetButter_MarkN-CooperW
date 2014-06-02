@@ -1,9 +1,12 @@
 import java.util.*;
 import java.io.*;
 
-public class Driver {
-	public static void main(String[] args) {
-		try{
+public class BattleShipDriver implements MiniGame {
+    public BattleShipDriver(){}
+
+    public boolean runMe(){
+	boolean i = false; 
+	try{
 		BattleShip game = new BattleShip();
 		Scanner sc = new Scanner(System.in);
 		String s;
@@ -244,14 +247,19 @@ public class Driver {
 		}
 
 		if (game.play() == 1)
-		    return true;
+		    return !i;
 		else
-		    return false; 
+		    return i; 
 				
 	
 	}
 	catch (Exception e) {}
 	
+	return false;
+    }
 
-	}
+    // public static void main(String[]args){
+    // 	BshipDriver ha = new BshipDriver();
+    // 	ha.runMe();
+    // }	
 }

@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-public class BshipDriver implements MiniGame {
-    public BshipDriver(){}
+public class BattleShipDriver implements MiniGame {
+    public BattleShipDriver(){}
 
     public boolean runMe(){
 	boolean i = false; 
