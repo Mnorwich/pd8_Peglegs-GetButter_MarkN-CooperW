@@ -106,6 +106,10 @@ public class Driver{
 		    if(deaths == 3){
 			System.out.println("YOU HAVE FAILED"); 
 		    }
+		    else if(i == 0){
+			System.out.println(name + ", you have failed at your task! Be wary of your faults." + "\n" + 
+					   "You must retry the first level.  You have " + (3 - deaths) + " lives left"); 
+		    }
 		    else{
 			System.out.println(name + ", you have failed at your task!  Be wary of your faults." + "\n" + 
 				       "You have been moved back a level and must recomplete the prior task. " + " You have " + (3 - deaths) + " lives left" ); 
