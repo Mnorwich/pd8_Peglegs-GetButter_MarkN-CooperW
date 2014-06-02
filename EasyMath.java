@@ -51,7 +51,6 @@ public class EasyMath implements MiniGame{
 	    return false;
 	}
 	return false;
-    }
-    public static void main (String[] args){
+
     }
 }
