@@ -130,12 +130,12 @@ public class Driver{
     public static void main(String[] args){
 	Driver d = new Driver(); 
 	Tree n = new Tree(); 
+	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
+       	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
+	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
 	n.add(new TreeNode (new BattleShipDriver(), "Do you want to go right(1) or left(0)")); 
-       	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
-	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
-	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
-       	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
-	n.add(new TreeNode (new EasyMath(), "Do you want to go right(1) or left(0)")); 
+       	n.add(new TreeNode (new BattleShipDriver(), "Do you want to go right(1) or left(0)")); 
+	n.add(new TreeNode (new BattleShipDriver(), "Do you want to go right(1) or left(0)")); 
 	
        	d.main(); 
 	d.runGame(n);

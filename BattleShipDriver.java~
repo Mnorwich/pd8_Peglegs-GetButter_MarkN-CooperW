@@ -258,8 +258,9 @@ public class BattleShipDriver implements MiniGame {
 	return false;
     }
 
-    public static void main(String[]args){
-	BshipDriver ha = new BshipDriver();
-	ha.runMe();
-    }	
+    public static void main(String[] args){
+    	BattleShipDriver ha = new BattleShipDriver();
+    	ha.runMe();
+    }
+    
 }

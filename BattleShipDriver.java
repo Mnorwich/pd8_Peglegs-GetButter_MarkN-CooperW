@@ -18,7 +18,7 @@ public class BattleShipDriver implements MiniGame {
 		boolean b;
 		char ship;
 		//Thread t;
-		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to BattleShip!");
+		System.out.println("\n\n\nPrepare to duel in the game of Battle Ship");
 		
 		Thread.sleep(5000);
 		System.out.println("Here is your board:\n" + game.showPlayer());
@@ -246,6 +246,7 @@ public class BattleShipDriver implements MiniGame {
 			}
 		}
 
+
 		if (game.play() == 1)
 		    return !i;
 		else
@@ -253,13 +254,15 @@ public class BattleShipDriver implements MiniGame {
 				
 	
 	}
-	catch (Exception e) {}
+	catch (Exception e) {
 	
 	return false;
+	}
     }
 
-    // public static void main(String[]args){
-    // 	BshipDriver ha = new BshipDriver();
-    // 	ha.runMe();
-    // }	
+    public static void main(String[] args){
+    	BattleShipDriver ha = new BattleShipDriver();
+    	ha.runMe();
+    }
+    
 }
