@@ -2,11 +2,11 @@ import java.util.*;
 import java.io.*;
 
 public class EasyMath implements MiniGame{
-    public EasyMath(){
-    }
+    
+    
     
     public boolean runMe(){
-	Scanner sc = new Scanner(System.in);
+       	Scanner sc = new Scanner(System.in);
 	int n1 = (int)(Math.random() *100);
 	int n2 = (int)(Math.random() *100);
 	int opp= (int)(Math.random() *3);
@@ -51,5 +51,6 @@ public class EasyMath implements MiniGame{
 	    return false;
 	}
 	return false;
+
     }
 }

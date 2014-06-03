@@ -18,7 +18,7 @@ public class Tree {
      }//O(1)
 
 
-
+    
     /*****************************************************
      * boolean isEmpty()
      * Returns true if no meaningful elements in heap, false otherwise
@@ -36,6 +36,10 @@ public class Tree {
     
     public int size(){
 	return _heap.size(); 
+    }
+
+    public TreeNode get(int i){
+	return _heap.get(i); 
     }
 
 
