@@ -6,4 +6,6 @@ Coding: Copied and edited Tree, and TreeNode. Started MiniGame interface and Eas
 5/29: Flushing out ideas.  Finilized our plans for the driver and how the TreeNodes tie in with the storyline (game is accesed first.  If player wins then the story is printed in order to pick the path). -M&C
 5/30: Completed Driver.  Added size method for Treee. Still wondering if node.getGame().runGame() will return a boolean statement. Wrote out plan to implement battleship minigame.  Might need create two files for this minigame. -M 
 6/1: Completed EasyMath. -C
-6/2: Fixed bugs in Driver. Edited BattleShip. 
+6/2: Fixed bugs in Driver. Edited BattleShip. -M&C
+    Completed and pushed BattleShip -M
+    Completed and pushed Hangman -C
