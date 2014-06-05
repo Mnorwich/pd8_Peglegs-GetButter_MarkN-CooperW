@@ -1,0 +1,13 @@
+First Level:
+0) A Wise Old Man stands in your way. You must defeat him in a game of wits to move on!
+
+	There is nothing between you and the castle! Do you want to (0) enter through the main gate? or (1) enter through the back door?
+
+Second level:
+0 (main gate) ) As you're crossing the moat to the main gate a dragon emerges from the depths below. He gives a mighty roar and prepares to feast on your flesh. You propose a challenge. If you can defeat him in a game of hangman he will point you on the way to your ________. If you lose, however, he will point you in the way of his stomach.
+
+	You've defeated the dragon and he prepares to point you on your way but the tricky dragon, angry for losing his dinner, refuses to tell you which way to go, He opens the gate and flys away. You must choose to (0) go down the stair to the dark cellar. or (1) climb the long winding stair toward the top.
+
+1 (back door) ) You walk to the back of the castle and see a door, but defending it is Andre the Giant. He tells you the he posses the strength of thirty men, to which you respond "but do you posess the wits of a Stuyvesant student?" Andre is insulted and challenges you to a game of Trivia. Princess Bride trivia.
+
+	You have outsmarted The Giant and proceed through the door 
