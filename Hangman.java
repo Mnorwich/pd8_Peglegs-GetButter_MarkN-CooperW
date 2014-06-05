@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Hangman implements MiniGame{
-    private String[] words = {"hello", "computer", "science", "internet", "china", "football", "brown", "playoffs", "document", "application", "desktop", "offense", "strife", "struggle", "murderer", "beleive", "exception", "reality", "somewhere", "comfortable", "loneliness", "happiness", "frustrate"};
+    private String[] words = {"hello", "computer", "science", "internet", "china", "football", "brown", "playoffs", "document", "application", "desktop", "offense", "strife", "struggle", "murderer", "beleive", "exception", "reality", "somewhere", "comfortable", "loneliness", "happiness", "frustrate", "utmost"};
 
     private String word, display, guessedLetters;
     Scanner sc = new Scanner(System.in);
@@ -11,18 +11,33 @@ public class Hangman implements MiniGame{
     public boolean help(String guess, int lives){
 	
 	if(lives == 0){
+	    System.out.println(word);
+	    System.out.println("You Loose");
 	    return false;
+	}
+
+	if(guessedLetters.indexOf(guess) >= 0){
+	    System.out.println("\033[2J");
+
+	    System.out.println(display);
+	    System.out.println("Guessed:" + guessedLetters);
+	    System.out.println("Lives: " + lives);
+	    System.out.println("You already guessed that! Try another letter!");
+	    guess = sc.nextLine().substring(0,1);
+	    return help(guess, lives);
 	}
 
 	if(word.indexOf(guess) < 0){
 	    lives--;
 	    guessedLetters += guess;
 	    
+	    System.out.println("\033[2J");
+	    	    
 	    System.out.println(display);
 	    System.out.println("Guessed:" + guessedLetters);
 	    System.out.println("Lives: " + lives);
 	    System.out.println("Oops! Try again!");
-	    guess = sc.nextLine();
+	    guess = sc.nextLine().substring(0,1);
 	    return help(guess, lives);
 	}
 	
@@ -35,17 +50,23 @@ public class Hangman implements MiniGame{
 		display = display.substring(0, i)+ guess+ 
 		    display.substring(i + 1);
 	    }
+	    guessedLetters += guess;
+	    
+	    System.out.println("\033[2J");
+
 	    if(display.indexOf("_") < 0){
 		System.out.println(word);
 		System.out.println("You Won!");
 		return true;
 	    }
+
+	    
 	    
 	    System.out.println(display);
 	    System.out.println("Guessed:" + guessedLetters);
 	    System.out.println("Lives: " + lives);
 	    System.out.println("Nice one! Guess again!");
-	    guess = sc.nextLine();
+	    guess = sc.nextLine().substring(0,1);
 	    return help(guess,lives);
 	}
     }
@@ -61,7 +82,7 @@ public class Hangman implements MiniGame{
 	System.out.println("Guessed: " + guessedLetters);
 	System.out.println("Lives: " + 6);
 	System.out.println("Guess a letter:");
-	String guess = sc.nextLine();
+	String guess = sc.nextLine().substring(0,1);
 	return help(guess,6);
     }
 
