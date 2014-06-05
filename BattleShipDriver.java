@@ -20,11 +20,11 @@ public class BattleShipDriver implements MiniGame {
 		//Thread t;
 		System.out.println("\n\n\nPrepare to duel in the game of Battle Ship");
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		System.out.println("Here is your board:\n" + game.showPlayer());
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		System.out.println("You must first place your patrol boat on the board. It has a length of two units.");
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your patrol boat vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -53,7 +53,7 @@ public class BattleShipDriver implements MiniGame {
 			}
 		}
 		System.out.println("Now you must place your submarine. It has a length of three units.");
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println(game.showPlayer());
 		System.out.println("Would you like to place your submarine vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
@@ -84,7 +84,7 @@ public class BattleShipDriver implements MiniGame {
 		}
 		System.out.println("Now you must place your destroyer. It also has a length of three units.");
 		System.out.println(game.showPlayer());
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your destroyer vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -114,7 +114,7 @@ public class BattleShipDriver implements MiniGame {
 		}
 		System.out.println("Now you must place your battleship. It has a length of four units.");
 		System.out.println(game.showPlayer());		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your battleship vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -144,7 +144,7 @@ public class BattleShipDriver implements MiniGame {
 		}
 		System.out.println("Now you must place your aircraft carrier. It has a length of five units.");
 		System.out.println(game.showPlayer());		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your aircraft carrier vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -174,14 +174,14 @@ public class BattleShipDriver implements MiniGame {
 		}
 //Ships have been placed
 		System.out.println("You get to go first.");
-		Thread.sleep(1500);
+		//Thread.sleep(1500);
 		System.out.println("Here is your display. It will appear on each of your turns.");
-		Thread.sleep(2500);
+		//Thread.sleep(2500);
 		turn = 0;
 		while (game.play() == 0) {
 			if (turn == 0) {
 				System.out.println(game.showDisplay() + "\n//////////////\n\n" + game.showPlayer() + "\n");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.println("Your turn to attack! Choose a row:");
 				row  = sc.nextInt() - 1;
 				System.out.println("Choose a column:");
@@ -220,18 +220,18 @@ public class BattleShipDriver implements MiniGame {
 					}
 					else
 						System.out.println("HIT! It is your opponents turn to attack.");
-				Thread.sleep(3000);
+				//Thread.sleep(3000);
 				turn = 1;
 			}
 			else if (turn == 1) {
 				System.out.print("Your opponent is thinking");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print(".");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print(".");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print(".");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print("\n");
 				if (a == 0 || a == 2)
 					a = game.turn();
@@ -241,7 +241,7 @@ public class BattleShipDriver implements MiniGame {
 					a = game.turn3();
 				else if (a == 4)
 					a = game.turn4();
-				Thread.sleep(3000);
+				//Thread.sleep(3000);
 				turn = 0;
 			}
 		}

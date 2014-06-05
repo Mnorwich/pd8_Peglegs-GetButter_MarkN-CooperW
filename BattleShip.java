@@ -56,7 +56,6 @@ public class BattleShip {
 	}
 	return s;
     }
-
 	public boolean addShipH(int row, int col, int length, char[][] board, char ship) {
 		if (col + length > board[0].length || row >= board.length || row < 0 || col < 0)
 			return false;
@@ -209,16 +208,18 @@ public class BattleShip {
 	public int attack(int row, int col, char[][] board) {
 		if (board[row][col] == '-') {
 			board[row][col] = '+';
-			if (board.equals(opp))
+			if (board.equals(opp)){
 				display[row][col] = '+';
+			}
 			return 1;
 		}
 		else if (board[row][col] == '+' || board[row][col] == 'H' || row < 0 || col < 0 || row >= 10 || col >= 10)
 			return 0;
 		else {
 			board[row][col] = 'H';
-			if (board.equals(opp))
+			if (board.equals(opp)){
 				display[row][col] = 'H';
+			}
 			return 2;
 		}
 	}

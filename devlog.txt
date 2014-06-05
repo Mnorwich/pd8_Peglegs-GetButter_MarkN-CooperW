@@ -9,3 +9,4 @@ Coding: Copied and edited Tree, and TreeNode. Started MiniGame interface and Eas
 6/2: Fixed bugs in Driver. Edited BattleShip. -M&C
     Completed and pushed BattleShip -M
     Completed and pushed Hangman -C
+6/5: Added new story slot for introduction to the each level.  Changed driver accordingly. -M
