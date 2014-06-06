@@ -4,11 +4,13 @@ import java.io.*;
 public class BattleShip {
 	private char[][] player, opp, display;
 	private int rowH, colH, direction, rowD, colD;
+	private boolean safety;
 
 	public BattleShip () {
 		player = new char[10][10];
 		opp = new char[10][10];
 		display = new char[10][10];
+		safety = false;
 		for (int i = 0;i<player.length;i++) {
 			for (int j = 0;j<player[0].length;j++) {
 				player[i][j] = '-';
@@ -56,6 +58,7 @@ public class BattleShip {
 	}
 	return s;
     }
+
 	public boolean addShipH(int row, int col, int length, char[][] board, char ship) {
 		if (col + length > board[0].length || row >= board.length || row < 0 || col < 0)
 			return false;
@@ -206,20 +209,18 @@ public class BattleShip {
 	}
 
 	public int attack(int row, int col, char[][] board) {
-		if (board[row][col] == '-') {
+		if (row < 0 || col < 0 || row >= 10 || col >= 10 || board[row][col] == '+' || board[row][col] == 'H')
+			return 0;
+		else if (board[row][col] == '-') {
 			board[row][col] = '+';
-			if (board.equals(opp)){
+			if (board.equals(opp))
 				display[row][col] = '+';
-			}
 			return 1;
 		}
-		else if (board[row][col] == '+' || board[row][col] == 'H' || row < 0 || col < 0 || row >= 10 || col >= 10)
-			return 0;
 		else {
 			board[row][col] = 'H';
-			if (board.equals(opp)){
+			if (board.equals(opp))
 				display[row][col] = 'H';
-			}
 			return 2;
 		}
 	}
@@ -235,6 +236,7 @@ public class BattleShip {
 	}
 
 	public int turn() {
+		safety = false;
 		int n = 0;
 		char ship = '-';
 		String s = "";
@@ -347,6 +349,8 @@ public class BattleShip {
 		int row = rowH;
 		char ship = '-';
 		while (n == 0) {
+			col = colH;
+			row = rowH;
 			d = r.nextInt(4);
 			if (d == 0) 
 				col++;
@@ -356,18 +360,23 @@ public class BattleShip {
 				col--;
 			else if (d == 3)
 				row--;
-			ship = player[row][col];
+			if (row >= 0 && col >= 0 && row < 10 && col < 10)
+				ship = player[row][col];
 			n = attack(row, col, player);
 		}
-		if (n == 0) 
-			return 1;
+	//	if (n == 0) 
+	//		return 1;
 		if (n == 1) {
 			System.out.println("Miss at " + (row + 1) + ", " + (col + 1) + "!");
 			return 1;
 		}
 		else if (n == 2) {
-			if (ship == 'P' || !check(player, 'P')) {
+			if (ship == 'P' && !check(player, 'P')) {
 				System.out.println("Hit at " + (row + 1) + ", " + (col + 1) +"! Your patrol boat has been sunk!");
+				return 2;
+			}
+			else if (!check(player, ship)) {
+				System.out.println("Hit at " + (row+1) + ", " + (col+1) +"! Your ship has been sunk!");
 				return 2;
 			}
 			direction = d;
@@ -382,6 +391,7 @@ public class BattleShip {
 		int col = colD;
 		int row = rowD;
 		int n = 0;
+		char ship = '-';
 		if (direction == 0)
 			col++;
 		else if (direction == 1)
@@ -390,10 +400,15 @@ public class BattleShip {
 			col--;
 		else if (direction == 3)
 			row--;
-		char ship = player[row][col];
+		if (row >= 0 && col >= 0 && row < 10 && col < 10)
+			ship = player[row][col];
 		n = attack(row, col, player);
-		if (n == 0)
-			return turn4();
+		if (n == 0) {
+			if (safety)
+				return turn();
+			else
+				return turn4();
+		}
 		else if (n == 1) {
 			System.out.println("Miss at " + (row + 1) + ", " + (col + 1) + "!");
 			return 4;
@@ -424,7 +439,8 @@ public class BattleShip {
 
 	
 	public int turn4() {
-		Random r = new Random();
+		//Random r = new Random();
+		safety = true;
 		colD = colH;
 		rowD = rowH;
 		if (direction == 0)
@@ -435,12 +451,9 @@ public class BattleShip {
 			direction = 0;
 		else if (direction == 3)
 			direction = 1;
-		try {
+		
 		return turn3();
-		}
-		catch (Exception e) {
-			return turn();
-		} 
+		
 			
 	}
 
