@@ -20,9 +20,8 @@ public class TreeNode {
     }
 
     TreeNode(MiniGame game, String story1){
-    	this.game = game; 
-    	this.story1 = story1; 
-    	this.story2 = null; 
+	this.game = game; 
+	this.story1 = story1; 
     }
           
  

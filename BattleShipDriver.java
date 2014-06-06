@@ -1,8 +1,9 @@
 import java.util.*;
 import java.io.*;
 
-public class Driver {
-	public static void main(String[] args) {
+public class BattleShipDriver implements MiniGame{
+    public boolean runMe(){
+	boolean i = false; 
 		try{
 		BattleShip game = new BattleShip();
 		Scanner sc = new Scanner(System.in);
@@ -81,7 +82,7 @@ public class Driver {
 		}
 		System.out.println("Now you must place your destroyer. It also has a length of three units.");
 		System.out.println(game.showPlayer());
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your destroyer vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -111,7 +112,7 @@ public class Driver {
 		}
 		System.out.println("Now you must place your battleship. It has a length of four units.");
 		System.out.println(game.showPlayer());		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your battleship vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -141,7 +142,7 @@ public class Driver {
 		}
 		System.out.println("Now you must place your aircraft carrier. It has a length of five units.");
 		System.out.println(game.showPlayer());		
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		System.out.println("Would you like to place your aircraft carrier vertically or horizontally?");
 		System.out.println("1. Vertically\n2. Horizontally");
 		n = sc.nextInt();
@@ -217,18 +218,18 @@ public class Driver {
 					}
 					else
 						System.out.println("HIT! It is your opponents turn to attack.");
-				Thread.sleep(3000);
+				// Thread.sleep(3000);
 				turn = 1;
 			}
 			else if (turn == 1) {
 				System.out.print("Your opponent is thinking");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print(".");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print(".");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print(".");
-				Thread.sleep(1000);
+				//Thread.sleep(1000);
 				System.out.print("\n");
 				if (a == 0 || a == 2)
 					a = game.turn();
@@ -238,20 +239,26 @@ public class Driver {
 					a = game.turn3();
 				else if (a == 4)
 					a = game.turn4();
-				Thread.sleep(3000);
+				//Thread.sleep(3000);
 				turn = 0;
 			}
 		}
 
 		if (game.play() == 1)
-			System.out.println("YOU WIN!!!!!");
+		    return !i; 
 		else
-			System.out.println("You lost.");
-				
+		    return i;  
+		      	
+		}
+		catch (Exception e) {
 	
-	}
-	catch (Exception e) {}
-	
+		    return false; 
+		}
+    }
+    public static void main (String args[]){
+	BattleShipDriver d = new BattleShipDriver(); 
+	d.runMe(); 
+    }
 
-	}
+    
 }
