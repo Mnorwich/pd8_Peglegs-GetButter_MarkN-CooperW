@@ -30,6 +30,13 @@ public class Hangman implements MiniGame{
 	if(word.indexOf(guess) < 0){
 	    lives--;
 	    guessedLetters += guess;
+	 
+ 
+	    if(lives == 0){
+		System.out.println(word);
+		System.out.println("You Loose");
+		return false;
+	    }   
 	    
 	    System.out.println("\033[2J");
 	    	    
