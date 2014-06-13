@@ -32,17 +32,34 @@ public class BattleShipDriver implements MiniGame{
 		n = sc.nextInt();
 		while (n != 1 && n != 2) {
 			System.out.println("Incorrect input. Please try again:\n1. Vertically\n2. Horizontally");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			    }
+
 			n = sc.nextInt();
 		}
 		System.out.println("Select a row:");
+		while(!sc.hasNextInt()){
+		    System.out.println("Please give and Integer response");
+		    sc.nextLine();
+		}
 		row = sc.nextInt() - 1;
 		System.out.println("Select a column:");
 		col = sc.nextInt() - 1;
 		if (n == 1) {
 			while (!game.addShipV(row, col, 2, game.getPlayer(), 'P')) {
 				System.out.println("This ship cannot be placed here. Please choose a valid location.\nSelect a row:");
+				while(!sc.hasNextInt()){
+				    System.out.println("Please give and Integer response");
+				    sc.nextLine();
+				}
 			row = sc.nextInt() - 1;
 			System.out.println("Select a column:");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			}
 			col = sc.nextInt() - 1;
 			}
 		}
@@ -51,6 +68,10 @@ public class BattleShipDriver implements MiniGame{
 				System.out.println("This ship cannot be placed here. Please choose a valid location.\nSelect a row:");
 			row = sc.nextInt() - 1;
 			System.out.println("Select a column:");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			}
 			col = sc.nextInt() - 1;
 			}
 		}
@@ -66,6 +87,10 @@ public class BattleShipDriver implements MiniGame{
 		n = sc.nextInt();
 		while (n != 1 && n != 2) {
 			System.out.println("Incorrect input. Please try again:\n1. Vertically\n2. Horizontally");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			}
 			n = sc.nextInt();
 		}
 		System.out.println("Select a row:");
@@ -262,18 +287,34 @@ public class BattleShipDriver implements MiniGame{
 		}
 		row = sc.nextInt() - 1;
 		System.out.println("Select a column:");
+		while(!sc.hasNextInt()){
+		    System.out.println("Please give and Integer response");
+		    sc.nextLine();
+		}
 		col = sc.nextInt() - 1;
 		if (n == 1) {
 			while (!game.addShipV(row, col, 5, game.getPlayer(), 'A')) {
 				System.out.println("This ship cannot be placed here. Please choose a valid location.\nSelect a row:");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			}	
 			row = sc.nextInt() - 1;
 			System.out.println("Select a column:");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			}
 			col = sc.nextInt() - 1;
 			}
 		}
 		else if (n == 2) {
 			while (!game.addShipH(row, col, 5, game.getPlayer(), 'A')) {
 				System.out.println("This ship cannot be placed here. Please choose a valid location.\nSelect a row:");
+			while(!sc.hasNextInt()){
+			    System.out.println("Please give and Integer response");
+			    sc.nextLine();
+			}
 			row = sc.nextInt() - 1;
 			System.out.println("Select a column:");
 			col = sc.nextInt() - 1;
@@ -290,14 +331,30 @@ public class BattleShipDriver implements MiniGame{
 				System.out.println(game.showDisplay() + "\n//////////////\n\n" + game.showPlayer() + "\n");
 				//Thread.sleep(1000);
 				System.out.println("Your turn to attack! Choose a row:");
+				while(!sc.hasNextInt()){
+				    System.out.println("Please give and Integer response");
+				    sc.nextLine();
+				}
 				row  = sc.nextInt() - 1;
 				System.out.println("Choose a column:");
+				while(!sc.hasNextInt()){
+				    System.out.println("Please give and Integer response");
+				    sc.nextLine();
+				}
 				col = sc.nextInt() - 1;
 				while (row >= 10 || col >= 10 || col < 0 || row < 0) {
 					System.out.println("Invalid input. Please try again.");
 					System.out.println("Choose a row:");
+					while(!sc.hasNextInt()){
+					    System.out.println("Please give and Integer response");
+					    sc.nextLine();
+					}
 					row = sc.nextInt() - 1;
 					System.out.println("Choose a column");
+					while(!sc.hasNextInt()){
+					    System.out.println("Please give and Integer response");
+					    sc.nextLine();
+					}
 					col = sc.nextInt() - 1;
 				}
 				ship = game.getOpp()[row][col];
@@ -305,8 +362,16 @@ public class BattleShipDriver implements MiniGame{
 				while (n == 0) {
 					System.out.println("You have already selected this location. Please try again.");
 					System.out.println("Choose a row:");
+					while(!sc.hasNextInt()){
+					    System.out.println("Please give and Integer response");
+					    sc.nextLine();
+					}
 					row = sc.nextInt() - 1;
 					System.out.println("Choose a column:");
+					while(!sc.hasNextInt()){
+					    System.out.println("Please give and Integer response");
+					    sc.nextLine();
+					}
 					col = sc.nextInt() - 1;
 					n = game.attack(row, col, game.getOpp());
 				}
@@ -357,10 +422,10 @@ public class BattleShipDriver implements MiniGame{
 		    return !i; 
 		else
 		    return i;  
-		      	
+
 		}
 		catch (Exception e) {
-	
+
 		    return false; 
 		}
     }
