@@ -1,13 +1,36 @@
 First Level:
 0) A Wise Old Man stands in your way. You must defeat him in a game of wits to move on!
 
-	There is nothing between you and the castle! Do you want to (0) enter through the main gate? or (1) enter through the back door?
+	There is nothing between you and the castle! Do you want to (0) enter through the main gate? or (1) enter through the bridge of death?
 
 Second level:
-0 (main gate) ) As you're crossing the moat to the main gate a dragon emerges from the depths below. He gives a mighty roar and prepares to feast on your flesh. You propose a challenge. If you can defeat him in a game of hangman he will point you on the way to your ________. If you lose, however, he will point you in the way of his stomach.
+0 (main gate) ) As you're crossing the moat to the main gate a dragon emerges from the depths below. He gives a mighty roar as he prepares to feast on your flesh. You propose a challenge. If you can defeat him in a game of hangman he will point you on the way to your ________. If you lose, however, he will point you in the way of his stomach.
 
-	You've defeated the dragon and he prepares to point you on your way but the tricky dragon, angry for losing his dinner, refuses to tell you which way to go, He opens the gate and flys away. You must choose to (0) go down the stair to the dark cellar. or (1) climb the long winding stair toward the top.
+Victory:	You've defeated the dragon and he prepares to point you on your way but the tricky dragon, angry for losing his dinner, refuses to tell you which way to go.  He opens the gate and flys away. You must choose to (0) go down the stairs to the dark cellar. or (1) climb the long winding stair toward the top.
 
-1 (back door) ) You walk to the back of the castle and see a door, but defending it is Andre the Giant. He tells you the he posses the strength of thirty men, to which you respond "but do you posess the wits of a Stuyvesant student?" Andre is insulted and challenges you to a game of Trivia. Princess Bride trivia.
+1 (bridge of death) )  The old man from scene twenty-four appears.  He is the keeper of the bridge of death.  He asks each traveler three questions, no, five questions.  He who answers the three questions, no, five questions, may cross in safely.  What if you get a question wrong, you ask? You are cast into the gorge of eternal peril. Answer the three questions, five questions, as best you can.  God be with you.
 
-	You have outsmarted The Giant and proceed through the door 
+Victory:  Right, off you go.  After crossing the bridge of death, you enter the castle.  Here you must choose to go down the left corridor (0) or the right corridor (1).  What is your choice?
+
+Third Level: 
+
+From Main gate.
+0 (Stairs to cellar)  In the corner you gaze upon a man sitting by candlelight.  He jumps to his feet at the sight of your presence.  To your surprise, he says “Hello.  My name is Inigo Montoya.  You killed my father. Prepare to die.”  You are confused because Inigo already revenged his fathers death in the movie.  Inigo is surprised you know his film so well and offers you a proposition.  If you can get through his trivia questions, you will survive.  Fail, and face the consequences.
+
+Victory:  You've impressed Inigo.  Leaving you with one last riddle he bids you farewell on your mission and the rest of your life.  His riddle states my father's killer had six fingers on this hand.  Your answer will be the direction you go.  The right answer will lead you on the right path.  Left(0) Right(1).
+ 
+
+1(Winding stair toward the top) Once at the top of the winding stairs, you encounter Bender from the hit TV series Futurama.  Puffing his cigar and drinking a juice box, he demands you leave his presence.   You plea with him, explaining that you are trying to save your .getRescuee().  Bender says that if your brain power can beat his computing power, you can move past him. 
+
+Victory:  You've outsmarted bender.  Walking through a cloud of smoke you continue to walk down a corridor.  But wait, theres a fork.  Do you want to continue left(0) or right(1)?
+
+From Bridge of death . 
+
+
+0 (left) )  After choosing to walk down the left corridor, Andre the Giant jumps out from behind a corner.  He tells you the he posses the strength of thirty men, to which you respond "but do you posses the wits of a Stuyvesant student?" Andre is insulted and challenges you to answer a math problem.  If you get it right, you may continue. 
+
+Victory:	You've outsmarted The Giant and he lets you proceed through the door.  
+
+1(rght) Ni! Ni! Ni! We are the Knights who say...Ni!  The keepers of the sacred word.  You tell the Knight you are a simple traveler who only seeks your .getRescuee(). Ni! Says the Knight.  Well, what is it you want? You question.  We want...to be entertained! You must beat me in a game of hangman or you will never pass, alive! 
+
+Victory: Ni! You have beaten me! Continue on your journey, traveler.  
