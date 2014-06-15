@@ -121,6 +121,10 @@ public class Driver{
 	}//close while
 	return victory; 
     }//close rungame
+
+    public String getRescuee(){ 
+	return this.rescuee; 
+    }
 		
 
 	 
@@ -129,11 +133,18 @@ public class Driver{
     public static void main(String[] args){
 	Driver d = new Driver(); 
 	Tree n = new Tree(); 
-	n.add(new TreeNode (new  EasyMath(), "prepare to play EasyMath", "Do you want to go right(1) or left(0)")); 
-       	n.add(new TreeNode (new Hangman(), "prepare to play Hangman", "Do you want to go right(1) or left(0)")); 
-	n.add(new TreeNode (new Hangman(), "Prepare to play hangman", "Do you want to go right(1) or left(0)")); 
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship", "")); 
-       	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship")); 
+	n.add(new TreeNode (new  EasyMath(), "A Wise Old Man stands in your way. You must defeat him in a game of wits to move on!", 
+			    "There is nothing between you and the castle! Do you want to (0) enter through the main gate? or (1) enter through the bridge of death?")); 
+       	n.add(new TreeNode (new Hangman(), "As you're crossing the moat to the main gate a dragon emerges from the depths below.  He gives a mighty roar as he prepares to feast on your flesh. You propose a challenge. If you can defeat him in a game of hangman he will point you on the way to your " +  d.getRescuee() + ".  If you lose, however, he will point you in the way of his stomach.", "You've defeated the dragon and he prepares to point you on your way but the tricky dragon, angry for losing his dinner, refuses to tell you which way to go.  He opens the gate and flys away. You must choose to (0) go down the stairs to the dark cellar. or (1) climb the long winding stairs toward the top.")); 
+	n.add(new TreeNode (new PBTrivia(), "The old man from scene twenty-four appears.  He is the keeper of the bridge of death.  He asks each traveler three questions, no, five questions.  He who answers the three questions, no, five questions, may cross it safely.  What if you get a question wrong, you ask? You are cast into the gorge of eternal peril.  Answer the three questions, no, five questions, as best you can.  God be with you.", "Right, off you go.  After crossing the bridge of death, you enter the castle.  Here you must choose to (0) go down the left corridor or (1)the right corridor.  What is your choice?")); 
+	n.add(new TreeNode (new PBTrivia(), "In the corner you gaze upon a man sitting by candlelight.  He jumps to his feet at the sight of your presence.  To your surprise, he says “Hello.  My name is Inigo Montoya.  You killed my father. Prepare to die.”  You are confused because Inigo already avenged his fathers death in The Princess Bride.  Inigo is surprised you know his film so well and offers you a proposition.  If you can get through his trivia questions, you will survive.  Fail, and face the consequences.", 
+			    "You've impressed Inigo.  Leaving you with one last riddle he bids you farewell on your mission and the rest of your life.  His riddle states, “my father's killer had six fingers on this hand.  Your answer will be the direction you go.”  The RIGHT answer will lead you on the RIGHT path.  Do you want to go (0)Left or (1)Right.")); 
+       	n.add(new TreeNode (new HardMath(), "Once at the top of the winding stairs, you encounter Bender from the hit TV series Futurama.  Puffing his cigar and drinking a juice box, he demands you leave his presence.  You plea with him, explaining that you are trying to save your " + d.getRescuee() + ".  Bender says that if your brain power can beat his computing power, you can move past him.", "You've outsmarted bender.  Walking through a cloud of smoke you continue to walk down a corridor.  But wait, theres a fork.  Do you want to continue (0)left or (1)right?")); 
+	n.add(new TreeNode (new Hangman(), "After choosing to walk down the left corridor, Andre the Giant jumps out from behind a corner.  He tells you the he posses the strength of thirty men, to which you respond but do you posses the wits of a Stuyvesant student? Andre is insulted and challenges you to play him in hangman.  If you win, you may continue.", 
+			    "You've outsmarted the giant and he lets you proceed through the corridor.  A daed end is approaching and you have two choices.  Do you want to (0)walk up the staircase or (1) open the door  the magically appeared on your right?"));
+	n.add(new TreeNode (new Hangman(), "Ni! Ni! Ni! We are the Knights who say...Ni!  The keepers of the sacred word, says the Knight who says Ni!.  You proclaim, Knight who says Ni!,  I am a simple traveler who only seeks my " + d.getRescuee() + ".  Ni!” Says the Knight.  Well, what is it you want? You question.  We want...to be entertained! You must beat me in a game of hangman or you will never pass, alive!"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
 	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
 	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
 	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
