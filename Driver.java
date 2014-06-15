@@ -6,6 +6,10 @@ public class Driver{
     
     private String name; 
     private String rescuee; 
+
+
+   
+	   
     
     public void main(){
 	Scanner sc = new Scanner(System.in);
@@ -28,7 +32,7 @@ public class Driver{
             rescuee = "KNIGHT";
 	System.out.println("\n\n" + name + ", you have chosen to save the " + rescuee + " your task lays ahead.  Proceed towards the castle.\n\n"); 
 	try {
-       	    Thread.sleep(1000);
+       	    Thread.sleep(4000);
        	} 
 	catch(InterruptedException ex) {
 	    Thread.currentThread().interrupt();
@@ -43,17 +47,28 @@ public class Driver{
 	Integer next = null; 
 	while(i < tree.size() && deaths != 3){
 	    if(i == 0 && deaths == 0){//if this is the absolute first time at the first node
-		System.out.println("Your " + rescuee + " awaits. " + "\n" + 
-     "However, if you fail to complete your task THREE times, your corpse will be discarded and the " + rescuee + "\n" +
-		  "will be locked in the castle for forever and always");
+		System.out.println("Your " + rescuee + " awaits behind those walls. " + "\n\n");
 		try {
-		    Thread.sleep(5000);
+		    Thread.sleep(3000);
+		} 
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}
+		System.out.println("If you fail to complete any task THREE times, your corpse will be discarded and your " + rescuee + "\n" + "will be locked in the castle for forever and always.\n");
+		try {
+		    Thread.sleep(3000);
 		} catch(InterruptedException ex) {
 		    Thread.currentThread().interrupt();
 		}
-		System.out.println(tree.get(i).getStory1()); 
+		System.out.println(tree.get(i).getStory1()+"\n"); 
 		if( tree.get(i).getGame().runMe()){ //boolean statement to see if they won
-		    System.out.println(tree.get(i).getStory2()); 
+		    try {
+			Thread.sleep(3000);
+		    } 
+		    catch(InterruptedException ex) {
+			Thread.currentThread().interrupt();
+		    }	 
+		    System.out.println("\n" +tree.get(i).getStory2() + "\n"); 
 		    next = sn.nextInt(); 
 		    if(next == 0)//if the want to go left (left from the birds eye view of a tree, with root at the top)
 			i = i * 2 + 1;
@@ -69,14 +84,32 @@ public class Driver{
 			System.out.println("YOU HAVE FAILED. Your " + rescuee + "  will never be free!"); 
 		    else{
      			System.out.println(name + ", you have failed at your task!  Be wary of your faults." + "\n" + 
-				       "You must retry the first level.  You have " + (3 - deaths) + " lives left"); 
+				       "You must retry the first level.  You have " + (3 - deaths) + " lives left.\n"); 
 		    }
 		}
 	    }//end of first if
 	    else if((i * 2 + 1) > tree.size() - 1){
 		System.out.println("Warrior, " + name + " you have now reached the last level.  To save your " + rescuee + " you must finish this one last task." + "\n");
-		System.out.println(tree.get(i).getStory1()); 
+		try {
+		    Thread.sleep(3000);
+		} 
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}	 
+		System.out.println(tree.get(i).getStory1() + "\n"); 
+		try {
+		    Thread.sleep(4000);
+		} 
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}	 
        		if(tree.get(i).getGame().runMe()){ 
+		    try {
+			Thread.sleep(4000);
+		    } 
+		    catch(InterruptedException ex) {
+			Thread.currentThread().interrupt();
+		    }	 
 		    System.out.println("Congradulations! You have saved your " + rescuee + ".  You may now ride off into the sunset and live hapily.");
 		    return true; 
 		}
@@ -91,9 +124,21 @@ public class Driver{
 		}
 	    }
 	    else{
-		System.out.println(tree.get(i).getStory1()); 
+		System.out.println(tree.get(i).getStory1()+"\n"); 
+		try {
+		    Thread.sleep(3000);
+		} 
+		catch(InterruptedException ex) {
+		    Thread.currentThread().interrupt();
+		}	 
 		if( tree.get(i).getGame().runMe()){ //boolean statement to see if they won
-       		    System.out.println(tree.get(i).getStory2()); 
+		    try {
+			Thread.sleep(4000);
+		    } 
+		    catch(InterruptedException ex) {
+			Thread.currentThread().interrupt();
+		    }	 
+       		    System.out.println("\n" + tree.get(i).getStory2()+"\n"); 
 		    next = sn.nextInt(); 
 		    if(next == 0)//if the want to go left (left from the birds eye view of a tree with root at the top)
 			i = i * 2 + 1;
@@ -106,11 +151,11 @@ public class Driver{
 			System.out.println("YOU HAVE FAILED"); 
 		    }
 		    else if(i == 0){
-			System.out.println(name + ", you have failed at your task! Be wary of your faults." + "\n" + 
+			System.out.println("\n" +name + ", you have failed at your task! Be wary of your faults." + "\n" + 
 					   "You must retry the first level.  You have " + (3 - deaths) + " lives left"); 
 		    }
 		    else{
-			System.out.println(name + ", you have failed at your task!  Be wary of your faults." + "\n" + 
+			System.out.println("\n" +name + ", you have failed at your task!  Be wary of your faults." + "\n" + 
 				       "You have been moved back a level and must recomplete the prior task. " + " You have " + (3 - deaths) + " lives left" ); 
 			i = (i - 1) / 2;//move you back
 		    }
@@ -123,8 +168,11 @@ public class Driver{
     }//close rungame
 
     public String getRescuee(){ 
-	return this.rescuee; 
+	return rescuee; 
     }
+    public String getName(){
+	return name;
+	    }
 		
 
 	 
@@ -142,8 +190,17 @@ public class Driver{
        	n.add(new TreeNode (new HardMath(), "Once at the top of the winding stairs, you encounter Bender from the hit TV series Futurama.  Puffing his cigar and drinking a juice box, he demands you leave his presence.  You plea with him, explaining that you are trying to save your " + d.getRescuee() + ".  Bender says that if your brain power can beat his computing power, you can move past him.", "You've outsmarted bender.  Walking through a cloud of smoke you continue to walk down a corridor.  But wait, theres a fork.  Do you want to continue (0)left or (1)right?")); 
 	n.add(new TreeNode (new Hangman(), "After choosing to walk down the left corridor, Andre the Giant jumps out from behind a corner.  He tells you the he posses the strength of thirty men, to which you respond but do you posses the wits of a Stuyvesant student? Andre is insulted and challenges you to play him in hangman.  If you win, you may continue.", 
 			    "You've outsmarted the giant and he lets you proceed through the corridor.  A daed end is approaching and you have two choices.  Do you want to (0)walk up the staircase or (1) open the door  the magically appeared on your right?"));
-	n.add(new TreeNode (new Hangman(), "Ni! Ni! Ni! We are the Knights who say...Ni!  The keepers of the sacred word, says the Knight who says Ni!.  You proclaim, Knight who says Ni!,  I am a simple traveler who only seeks my " + d.getRescuee() + ".  Ni!” Says the Knight.  Well, what is it you want? You question.  We want...to be entertained! You must beat me in a game of hangman or you will never pass, alive!"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new Hangman(), "Ni! Ni! Ni! We are the Knights who say...Ni!  The keepers of the sacred word, says the Knight who says Ni!.  You proclaim, Knight who says Ni!,  I am a simple traveler who only seeks my " + d.getRescuee() + ".  Ni!” Says the Knight.  Well, what is it you want? You question.  We want...to be entertained! You must beat me in a game of hangman or you will never pass, alive!", "Ni! You have beaten me! Continue on your journey, traveler.  You continue walking and come upon a (0) winding staircase or (1) straight staircase.  Which do you choose to take?"));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
+	
+
 	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
 	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
 	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
@@ -158,9 +215,4 @@ public class Driver{
 
 }//class
 
-    
-/*Unresolved-If we move back a level each time a person looses, do we want the inroduction speech to play again? If not, we night want to change it so that the person does not have to move back a level.  Also, do we want to personalize loosing statements? Instead of it saying, be wary of your faults....do we want each character at each obsticle to say a new thing?  Ex: Andre would laugh at you.  Dragon would feel bad and give you another try. 
- */
-	    
-	
     

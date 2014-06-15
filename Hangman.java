@@ -17,7 +17,7 @@ public class Hangman implements MiniGame{
 	}
 
 	if(guessedLetters.indexOf(guess) >= 0){
-	    System.out.println("\033[2J");
+	    System.out.println("\n\n");
 
 	    System.out.println(display);
 	    System.out.println("Guessed:" + guessedLetters);
@@ -38,7 +38,7 @@ public class Hangman implements MiniGame{
 		return false;
 	    }   
 	    
-	    System.out.println("\033[2J");
+	    System.out.println("\n\n");
 	    	    
 	    System.out.println(display);
 	    System.out.println("Guessed:" + guessedLetters);
@@ -59,7 +59,7 @@ public class Hangman implements MiniGame{
 	    }
 	    guessedLetters += guess;
 	    
-	    System.out.println("\033[2J");
+	    System.out.println("\n\n");
 
 	    if(display.indexOf("_") < 0){
 		System.out.println(word);
