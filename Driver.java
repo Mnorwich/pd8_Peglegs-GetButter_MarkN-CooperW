@@ -9,7 +9,7 @@ public class Driver{
     
     public void main(){
 	Scanner sc = new Scanner(System.in);
-	System.out.println("Welcome  warrior! You have been summoned on a mission of upmost importance.  State your name");
+	System.out.println("Welcome  warrior! You have been summoned on a mission of utmost importance.  State your name");
 	if (sc.hasNext()){
 	    name = sc.nextLine(); 
 	}
@@ -20,7 +20,7 @@ public class Driver{
 	catch(InterruptedException ex) {
 	    Thread.currentThread().interrupt();
        	}
-	 System.out.println("\n\nMarvelous, " + name + ", who you would like to rescue?" + "\n" + "Enter 1 if you want to save the PRINCESS, enter 2 if you want to save the knight");
+	 System.out.println("\n\nMarvelous, " + name + ", who you would like to rescue?" + "\n" + "Enter 1 if you want to save the PRINCESS, enter 2 if you want to save the KNIGHT");
         int i = sc.nextInt();
         if (i == 1)
             rescuee = "PRINCESS";
@@ -43,9 +43,9 @@ public class Driver{
 	Integer next = null; 
 	while(i < tree.size() && deaths != 3){
 	    if(i == 0 && deaths == 0){//if this is the absolute first time at the first node
-		System.out.println("Your first task awaites.  Complete each challenge in a timley manner. " + "\n" + 
-				   "However, if you fail to complete your task THREE times, your corpse will be discarded and the " + rescuee + "\n" +
-				   "will be locked in the castle for forever and always");
+		System.out.println("Your " + rescuee + " awaits. " + "\n" + 
+     "However, if you fail to complete your task THREE times, your corpse will be discarded and the " + rescuee + "\n" +
+		  "will be locked in the castle for forever and always");
 		try {
 		    Thread.sleep(5000);
 		} catch(InterruptedException ex) {
@@ -66,7 +66,7 @@ public class Driver{
 		else{
 		    deaths++; 
 		    if(deaths == 3)
-			System.out.println("YOU HAVE FAILED"); 
+			System.out.println("YOU HAVE FAILED. Your " + rescuee + "  will never be free!"); 
 		    else{
      			System.out.println(name + ", you have failed at your task!  Be wary of your faults." + "\n" + 
 				       "You must retry the first level.  You have " + (3 - deaths) + " lives left"); 
