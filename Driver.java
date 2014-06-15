@@ -181,6 +181,8 @@ public class Driver{
     public static void main(String[] args){
 	Driver d = new Driver(); 
 	Tree n = new Tree(); 
+	d.main(); 
+
 	n.add(new TreeNode (new  EasyMath(), "A Wise Old Man stands in your way. You must defeat him in a game of wits to move on!", 
 			    "There is nothing between you and the castle! Do you want to (0) enter through the main gate? or (1) enter through the bridge of death?")); 
        	n.add(new TreeNode (new Hangman(), "As you're crossing the moat to the main gate a dragon emerges from the depths below.  He gives a mighty roar as he prepares to feast on your flesh. You propose a challenge. If you can defeat him in a game of hangman he will point you on the way to your " +  d.getRescuee() + ".  If you lose, however, he will point you in the way of his stomach.", "You've defeated the dragon and he prepares to point you on your way but the tricky dragon, angry for losing his dinner, refuses to tell you which way to go.  He opens the gate and flys away. You must choose to (0) go down the stairs to the dark cellar. or (1) climb the long winding stairs toward the top.")); 
@@ -201,14 +203,8 @@ public class Driver{
 	n.add(new TreeNode (new BattleShipDriver(), "Help! Help me!  " + d.getName() + ", are you out there?!  Please can anybody help me.  It is your " + d.getRescuee() + " calling from behind that door.  As your hand turns the handle, someone taps you from behind!  It is a Jesus!  You  wonder why Jesus is at this castle, rather than being in the Dojo at Stuyvesant High School.  Jesus tells you you have one last task before you can claim your " + d.getRescuee() + ".  All of a sudden Jesus whips out BattleShip! To save your " + d.getRescuee() +  ", you must first beat me in BattleShip.  It gets a little boring around here and Jesus just wants to have some fun."));
 	
 
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
-	d.main(); 
+
+	
 	d.runGame(n);
     }		
     //DOES GETGAME.RUNME() RETURN BOOLEAN? YES.
