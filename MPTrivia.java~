@@ -1,0 +1,6 @@
+public class MPTrivia extends Trivia{
+    public MPTrivia(){
+	String[] tempquestions = {
+	    int[] tempanswers = {
+		answers = tempanswers;
+		questions = tempquestions;
