@@ -1,0 +1,22 @@
+public class PBTrivia extends Trivia{
+
+    public PBTrivia(){	
+	String[] questions = {"hi"};
+	
+	int [] answers = {2, 1};
+
+
+	
+    }
+
+    public boolean runMe(){
+	System.out.println("You must answer each question about The Princess Bride in order to move on, but be weary! Three wrong answers and you lose!");
+	return super.runMe();
+    }
+
+
+    public static void main(String[]args){
+	MiniGame m = new PBTrivia();
+	m.runMe();
+    }
+}

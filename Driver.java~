@@ -26,7 +26,7 @@ public class Driver{
             rescuee = "PRINCESS";
         else
             rescuee = "KNIGHT";
-	System.out.println("\n\n" + name + ", you have chosen to save the " + rescuee + " your task lays ahead.  Proceede towards the castle.\n\n"); 
+	System.out.println("\n\n" + name + ", you have chosen to save the " + rescuee + " your task lays ahead.  Proceed towards the castle.\n\n"); 
 	try {
        	    Thread.sleep(1000);
        	} 
@@ -43,7 +43,7 @@ public class Driver{
 	Integer next = null; 
 	while(i < tree.size() && deaths != 3){
 	    if(i == 0 && deaths == 0){//if this is the absolute first time at the first node
-		System.out.println("Your first task awates.  Complete each challenge in a timly manner. " + "\n" + 
+		System.out.println("Your first task awaites.  Complete each challenge in a timley manner. " + "\n" + 
 				   "However, if you fail to complete your task THREE times, your corpse will be discarded and the " + rescuee + "\n" +
 				   "will be locked in the castle for forever and always");
 		try {
@@ -129,20 +129,20 @@ public class Driver{
     public static void main(String[] args){
 	Driver d = new Driver(); 
 	Tree n = new Tree(); 
-	n.add(new TreeNode (new EasyMath(), "prepare to play EasyMath", "Do you want to go right(1) or left(0)")); 
+	n.add(new TreeNode (new  EasyMath(), "prepare to play EasyMath", "Do you want to go right(1) or left(0)")); 
        	n.add(new TreeNode (new Hangman(), "prepare to play Hangman", "Do you want to go right(1) or left(0)")); 
 	n.add(new TreeNode (new Hangman(), "Prepare to play hangman", "Do you want to go right(1) or left(0)")); 
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship")); 
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship", "")); 
        	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship")); 
-	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship")); 
-	
-       	d.main(); 
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	n.add(new TreeNode (new BattleShipDriver(), "Prepare to play battleship"));
+	d.main(); 
 	d.runGame(n);
-	
-    }
-   
-		
-		
+    }		
     //DOES GETGAME.RUNME() RETURN BOOLEAN? YES.
 
 }//class
