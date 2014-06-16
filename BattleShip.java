@@ -23,13 +23,13 @@ public class BattleShip {
 
     public String showDisplay() {
 	String s="";
-	s = s + "  12345678910\n";
+	s = s + "  1 2 3 4 5 6 7 8 9 10\n";
 	for (int i=0;i<display.length;i++) {
 		s = s + (i+1);
 		if (i<9)
 			s = s + " ";
 	    for (int j=0;j<display[i].length;j++) {
-		s=s+display[i][j];
+		s=s+display[i][j]+" ";
 	    }
 	    s=s+"\n";
 	}
@@ -46,13 +46,13 @@ public class BattleShip {
 	
     public String showPlayer() {
 	String s="";
-	s = s + "  12345678910\n";
+	s = s + "  1 2 3 4 5 6 7 8 9 10\n";
 	for (int i=0;i<player.length;i++) {
 		s = s + (i+1) ;
 		if (i < 9)
 			s = s+" ";
 	    for (int j=0;j<player[i].length;j++) {
-		s=s+player[i][j];
+		s=s+player[i][j]+" ";
 	    }
 	    s=s+"\n";
 	}
