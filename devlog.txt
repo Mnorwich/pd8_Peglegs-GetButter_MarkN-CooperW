@@ -10,3 +10,9 @@ Coding: Copied and edited Tree, and TreeNode. Started MiniGame interface and Eas
     Completed and pushed BattleShip -M
     Completed and pushed Hangman -C
 6/5: Added new story slot for introduction to the each level.  Changed driver accordingly. -M
+6/8: Started Story -M&C
+6/10: Wrote Trivia superClass -C Edited Driver (Story). -M
+6/11:Wrote PBTrivia -C 
+6/12:Wrote MPTrivia -C
+6/14: Worked on Story!! -M 
+6/15: finished story, Put together the Tree, SpellChecked. Made ReadMe. -M&C
