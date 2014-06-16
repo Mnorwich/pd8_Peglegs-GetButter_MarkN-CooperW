@@ -3,7 +3,7 @@ pd8_Peglegs-GetButter_MarkN-CooperW
 Play football-->Code-->Rinse and Repeat 
 
 TO RUN:
-javac Driver.java \n
+javac Driver.java
 java Driver
 
 WARNING:
