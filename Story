@@ -39,16 +39,33 @@ Level 4:
 From Inigo:
 0) (Left) You have chosen… Poorly. Inigo stabs you in the back for going the WRONG WAY!
 
-1) (Right) You walk down the corridor on the right and at the end there is a door. You can hear your ________ on the other side, but a child stands in your way. The child is visiously murdering toys. You recognize him as Sid from toy story. He says he won't let you pass until he is entertained. You tell him that you can show him a game he won't want to break...
+1) (Right) You walk down the corridor on the right and at the end there is a door. You can hear your ________ on the other side, but a child stands in your way. The child is visiously murdering toys. You recognize him as Sid from toy story. He says he won't let you pass until he is entertained. You tell him that you can show him a game he won't want to break…
+
+Victory: You've Defeated Sid and while he throws a temper tantrum, you manage to slip past him through the door.
+
+From Bender:
+0) (left) You walk down the corridor on the left and hear loud, labored, mechanical breathing. You turn the corner and see Darth Vader standing in your path. Vader prepares to strangle you with the force, but senses that the force is strong with you. He challenges you to a game of battleship to test your abilities.
+
+Victory: You've defeated Vader and he realizes that your powers of the force are too great for him to overcome so he allows you to pass.
 
 
-Harry potter
-Lord of the Rings
-Star Trek
-Zerg
-Scar
-Indian Jones
+1) (Right) You walk down the corridor to the right but you are abruptly cut off by the Evil Emperor Zurg. He points his ion blaster at you chanting "Destroy Buzz Lightyear!" You attempt to explain that you are not Buzz Lightyear. Unsure of whether or not to kill you he decides to challenge you to a game of Battleship while he makes his decision.
 
+Victory: You've defeated the Evil Emperor Zurg and he reluctantly decides to let you pass. 
 
+From Andre:
+0)(stairwell) You walk to the top of the stairs and you are cut off by a creepy looking guy without a nose. He tells you he is Lord Voldemort, and you ask him why he has no nose. He is extremely insulted by this remark and takes out his wand to kill you. You look down to the floor, but he says he wants to see the lights leave your eyes. You say it isn't fair to kill you with magic because magic doesn't really exist. Surprisingly he accepts this response and challenges you instead to a game of Battleship to determine your fate.
 
+Victory: You've beaten he who must not be named! So ashamed by his defeat, the Dark Lord lets you pass.
+
+1)(door) You walk through the door and enter a room lit bright red. On the far side of the room you see a door guarded by the burning Eye of Sauron. You hear an ominous voice coming from the Eye. He says he would kill you, but as he is nothing but an eye he instead will challenge you to a game of Battleship.
+ 
+Victory: You have defeated the Great Eye of Sauron. Now you can pass through the room safely.
+
+From Ni:
+0) (winding stair) You reach the top of the winding stair 
+Victory:
+
+1) (straight stair) You reach the end of the stairs 
+Victory:
 
